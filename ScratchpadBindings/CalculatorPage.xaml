@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ScratchpadBindings.CalculatorPage"
+             xmlns:local="clr-namespace:ScratchpadBindings">
+    <ContentPage.Content>
+        <Grid VerticalOptions="Center"
+              HorizontalOptions="Center"
+              ColumnSpacing="5"
+              RowSpacing="5">
+            <Grid.BindingContext>
+                <local:CalculatorViewModel />
+            </Grid.BindingContext>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
+                <Label Text="{Binding Path=DisplayText}" HeightRequest="25"/>
+            </Frame>
+            
+            <Button Text="/" Grid.Row="1" Grid.Column="0" TextColor="White" BackgroundColor="Silver" Command="{Binding Path=DivideCommand}"/>
+            <Button Text="X" Grid.Row="1" Grid.Column="1" TextColor="White" BackgroundColor="Silver" Command="{Binding Path=MultiplyCommand}"/>
+            <Button Text="Reset" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" TextColor="White" BackgroundColor="Black" Command="{Binding Path=ResetCommand}"/>
+            
+            <Button Text="7" Grid.Row="2" Grid.Column="0" TextColor="White" BackgroundColor="Gray" Command="{Binding Path=AddCharCommand}" CommandParameter="7"/>
+            <Button Text="8" Grid.Row="2" Grid.Column="1" TextColor="White" BackgroundColor="Gray" Command="{Binding Path=AddCharCommand}" CommandParameter="8"/>
+            <Button Text="9" Grid.Row="2" Grid.Column="2" TextColor="White" BackgroundColor="Gray" Command="{Binding Path=AddCharCommand}" CommandParameter="9"/>
+            <Button Text="-" Grid.Row="2" Grid.Column="3" TextColor="White" BackgroundColor="Silver" Command="{Binding Path=SubtractCommand}"/>
+           
+            <Button Text="4" Grid.Row="3" Grid.Column="0" TextColor="White" BackgroundColor="Gray" Command="{Binding Path=AddCharCommand}" CommandParameter="4"/>
+            <Button Text="5" Grid.Row="3" Grid.Column="1" TextColor="White" BackgroundColor="Gray" Command="{Binding Path=AddCharCommand}" CommandParameter="5"/>
+            <Button Text="6" Grid.Row="3" Grid.Column="2" TextColor="White" BackgroundColor="Gray" Command="{Binding Path=AddCharCommand}" CommandParameter="6"/>
+            <Button Text="+" Grid.Row="3" Grid.Column="3" TextColor="White" BackgroundColor="Silver" Command="{Binding Path=AddCommand}"/>
+            
+            <Button Text="1" Grid.Row="4" Grid.Column="0" TextColor="White" BackgroundColor="Gray" Command="{Binding Path=AddCharCommand}" CommandParameter="1"/>
+            <Button Text="2" Grid.Row="4" Grid.Column="1" TextColor="White" BackgroundColor="Gray" Command="{Binding Path=AddCharCommand}" CommandParameter="2"/>
+            <Button Text="3" Grid.Row="4" Grid.Column="2" TextColor="White" BackgroundColor="Gray" Command="{Binding Path=AddCharCommand}" CommandParameter="3"/>
+
+            
+            <Button Text="=" Grid.Row="4" Grid.Column="3" Grid.RowSpan="2" TextColor="White" BackgroundColor="Red" Command="{Binding Path=EqualsToCommand}"/>
+            <Button Text="0" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" TextColor="White" BackgroundColor="Gray" Command="{Binding Path=AddCharCommand}" CommandParameter="0"/>
+            <Button Text="." Grid.Row="5" Grid.Column="2" TextColor="White" BackgroundColor="Gray" />
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

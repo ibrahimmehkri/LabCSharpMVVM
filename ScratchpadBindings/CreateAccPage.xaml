@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ScratchpadBindings.CreateAccPage"
+             xmlns:local="clr-namespace:ScratchpadBindings">
+    <ContentPage.Content>
+        
+        <StackLayout Padding="10, 50, 10, 10">
+            <StackLayout.BindingContext>
+                <local:CreateAccountViewModel />
+            </StackLayout.BindingContext>
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <local:IntToStringConverter x:Key="intToStringConverter"/>
+                    <local:StringToIntConverter x:Key="stringToIntConverter"/>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            
+            <Editor Placeholder="Full name"
+                    VerticalOptions="Start"
+                    Margin="10"
+                    Text="{Binding Path=Name, Mode=OneWayToSource}"/>
+            
+            <Editor Placeholder="Phone number"
+                    VerticalOptions="Start"
+                    Margin="10"
+                    Text="{Binding Path=PhoneNumber, Mode=OneWayToSource}"/>
+            
+            <Editor Placeholder="Email address"
+                    VerticalOptions="Start"
+                    Margin="10"
+                    Text="{Binding Path=EmailAddress}"/>
+            
+            <Editor Placeholder="Age"
+                    VerticalOptions="Start"
+                    Margin="10"
+                    Text="{Binding Path=Age, Mode=OneWayToSource}"/>   
+            
+            <local:CountedLabel 
+                   Text="{Binding Path=Info}"
+                   x:Name="labelInfo"
+                   VerticalOptions="Start"
+                   Margin="10"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   FontSize="Medium"
+                   FontAttributes="Italic"/>
+            
+            <Label VerticalOptions="Start"
+                   Margin="10"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   FontSize="Medium"
+                   FontAttributes="Italic"
+                   BindingContext="{x:Reference labelInfo}"
+                   Text="{Binding Path=WordCount, StringFormat='{0} characters'}"/>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

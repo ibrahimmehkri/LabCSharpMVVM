@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{35C362D8-1C22-409F-BCF0-6949B15369F2}|Default">
+  <MonoDevelop.Ide.ItemProperties.ScratchpadBindings.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1A7FE3BF-32CD-4E44-9686-DD502D594EC6" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ScratchpadBindings/CreateAccPage.xaml">
+    <Files>
+      <File FileName="ScratchpadBindings/CalculatorPage.xaml" Line="40" Column="140" />
+      <File FileName="ScratchpadBindings/CalculatorViewModel.cs" Line="100" Column="37" />
+      <File FileName="ScratchpadBindings.iOS/Main.cs" />
+      <File FileName="ScratchpadBindings/CreateAccPage.xaml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ScratchpadBindings" expanded="True">
+            <Node name="ScratchpadBindings" expanded="True">
+              <Node name="CreateAccPage.xaml" selected="True" />
+            </Node>
+            <Node name="ScratchpadBindings.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
